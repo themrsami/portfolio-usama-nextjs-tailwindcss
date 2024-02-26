@@ -13,20 +13,20 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     useEffect(() => {
         if (isToggled) {
             document.body.classList.add('dark-body');
-            document.body.classList.remove('light-body'); // Add the 'dark' class
+            document.body.classList.remove('light-body');
         } else {
             document.body.classList.remove('dark-body');
-            document.body.classList.add('light-body'); // Remove the 'dark' class
+            document.body.classList.add('light-body');
         }
     }, [isToggled]);
     
     return (
         <ThemeContext.Provider value={{ isToggled, handleToggle }}>
                 <AnimatedCursor
-                    innerSize={8}
-                    outerSize={8}
+                    innerSize={12}
+                    outerSize={12}
                     color='0, 255, 255'
-                    outerAlpha={0.2}
+                    outerAlpha={0.3}
                     innerScale={1}
                     outerScale={3}
                     clickables={[
@@ -41,19 +41,10 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
                         'textarea',
                         'button',
                         '.link',
-                        {
-                            target: '.custom',
-                            options: {
-                                innerSize: 12,
-                                outerSize: 12,
-                                color: '0, 255, 255',
-                                outerAlpha: 0.3,
-                                innerScale: 1,
-                                outerScale: 3
-                            }
-                        }
+                        '.custom'
                     ]}
-                    />
+                />
+
             {children}
         </ThemeContext.Provider>
     );
