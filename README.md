@@ -16,23 +16,27 @@ Here are some of the projects I've worked on:
 
 ### Project 1
 
-[Project 1](https://www.saeedvisuals.com) is a [portfolio website]. It uses [HTML, CSS, JAVASCRIPT, TAILWINDCSS].
+[A Client's Portfolio Website] `https://www.saeedvisuals.com` is a [portfolio website]. It uses [HTML, CSS, JAVASCRIPT, TAILWINDCSS].
 
 ### Project 2
 
-[Project 2](https://carezonehomecare.vercel.app) is a [home-care website based in DUBAI]. It uses [React.js, Next.js, Tailwindcss].
+[A Client's Home Care Website] `https://carezonehomecare.vercel.app` is a [home-care website based in DUBAI]. It uses [React.js, Next.js, Tailwindcss].
+
+### Project 3
+
+[My Own Portfolio] `https://portfolio-usama-nextjs-tailwindcss.vercel.app/` is my portfolio webiste. It uses [Next.js (14.1.0), Tailwindcss]
 
 ## Contact Me
 
 I'm always open to new opportunities and collaborations. Feel free to reach out to me at [Your Email], or connect with me on 
-[LinkedIn](https://www.linkedin.com/in/usama-nazir)
-[Instagram](https://www.instagram.com/themrsami)
-[Facebook](https://www.facebook.com/themrsami)
-[Twitter](https://www.twitter.com/themrsami)
+[LinkedIn] `https://www.linkedin.com/in/usama-nazir`
+[Instagram] `https://www.instagram.com/themrsami`
+[Facebook] `https://www.facebook.com/themrsami`
+[Twitter] `https://www.twitter.com/themrsami`
 
 ## Deployment
 
-This portfolio is deployed on Vercel. You can view it live [here](your-vercel-url).
+This portfolio is deployed on Vercel. You can view it live [here] `https://portfolio-usama-nextjs-tailwindcss.vercel.app/`.
 
 ## Getting Started
 
