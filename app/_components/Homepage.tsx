@@ -72,7 +72,7 @@ const Homepage = () => {
                                     {`${texts[index].substring(0, subIndex)}${subIndex === texts[index].length ? '_' : ''}`}
                                 </p>
 
-                            <div className='flex flex-col md:flex-row md:mt-8 md:mx-auto md:gap-2 space-y-0.5 mx-auto lg:ml-4'>
+                            <div className='flex md:mt-8 flex-wrap md:mx-auto md:gap-2 space-y-0.5 mx-auto lg:ml-4'>
                                 <Link href="https://www.github.com/themrsami" target='_blank'>
                                     <button className={`group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold md:hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]`}>
                                         <BiLogoGithub className="text-3xl" />
