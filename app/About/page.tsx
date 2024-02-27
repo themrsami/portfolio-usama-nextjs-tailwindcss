@@ -106,7 +106,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="animatey mb-12 mt-8 w-[850px] h-[350px]">
+        <div className="animatey mb-24 mt-8 w-[850px] h-auto">
           <h2 className={`${headings} font-mono mb-1 text-2xl text-center font-semibold`}>Education Details</h2>
           <div className="bg-gray-900 w-full h-full rounded-lg">
               <div className="flex p-2 gap-1">
