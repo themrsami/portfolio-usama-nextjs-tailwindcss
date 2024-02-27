@@ -20,6 +20,12 @@ const config: Config = {
         '100': '25rem',  // 400px
         '120': '30rem',  // 480px
         // Add as many as you need...
+      },
+      animationDelay: {
+        '1': '1s',
+        '2': '2s',
+        '3': '3s',
+        // Add as many as you need...
       }
     },
   },

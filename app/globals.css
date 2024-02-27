@@ -100,3 +100,15 @@ body {
 .light-body{
   @apply bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400;
 }
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.delay-2 {
+  animation-delay: 0.8s;
+}
+
+.delay-3 {
+  animation-delay: 1.5s;
+}

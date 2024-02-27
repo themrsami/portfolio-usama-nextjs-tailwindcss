@@ -115,22 +115,30 @@ const Homepage = () => {
                             Accomplished projects
                         </div>
                         <div className='flex flex-col space-y-4 items-center justify-center'>
-                            <button className={`${projectsbuttonsClass}`}>
-                                <BiLogoJavascript className='text-yellow-400 text-3xl flex items-center'/>
-                                Javascript
-                            </button>
-                            <button className={`${projectsbuttonsClass}`}>
-                                <BiLogoReact className='text-blue-400 text-3xl flex items-center'/>
-                                React/Next.js
-                            </button>
-                            <button className={`${projectsbuttonsClass}`}>
-                                <BiLogoPython className={` ${pythonprojectLogo} text-3xl flex items-center`}/>
-                                Python
-                            </button>
-                            <button className={`${projectsbuttonsClass}`}>
-                                <BiLogoGithub className={` ${githubprojectLogo} text-3xl flex items-center`}/>
-                                Github
-                            </button>
+                            <Link href="/Projects/Javascript">
+                                <button className={`${projectsbuttonsClass}`}>
+                                    <BiLogoJavascript className='text-yellow-400 text-3xl flex items-center'/>
+                                    Javascript
+                                </button>
+                            </Link>
+                            <Link href="/Projects/React">
+                                <button className={`${projectsbuttonsClass}`}>
+                                    <BiLogoReact className='text-blue-400 text-3xl flex items-center'/>
+                                    React/Next.js
+                                </button>
+                            </Link>
+                            <Link href="/Projects/Python">
+                                <button className={`${projectsbuttonsClass}`}>
+                                    <BiLogoPython className={` ${pythonprojectLogo} text-3xl flex items-center`}/>
+                                    Python
+                                </button>
+                            </Link>
+                            <Link href="https://www.github.com/themrsami" target='_blank'>
+                                <button className={`${projectsbuttonsClass}`}>
+                                    <BiLogoGithub className={` ${githubprojectLogo} text-3xl flex items-center`}/>
+                                    Github
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -146,29 +154,31 @@ const Homepage = () => {
                         </div>
                     </div> 
                 </div>
-                <div className='animate block sm:flex gap-4 mt-12 mx-auto justify-center mb-32'>
+                <div className='animate flex flex-col sm:flex-row gap-4 mt-12 mx-auto justify-center items-center mb-32'>
                     <button
                         className={`cursor-pointer flex justify-center ${bottombuttons} px-3 py-2 rounded-full ${bottombuttontext} tracking-wider shadow-xl hover:${bottombuttonshover} hover:scale-105 duration-500 hover:ring-1 font-mono w-[150px] hover:${hoverring}`}
                         >Portfolio
                     </button>
-                    <button
-                        className={`cursor-pointer flex justify-between ${bottombuttons} px-3 py-2 rounded-full ${bottombuttontext} tracking-wider shadow-xl hover:${bottombuttonshover} hover:scale-105 duration-500 hover:ring-1 font-mono w-[150px] hover:${hoverring}`}
-                        >Resume
-                        <svg
-                            className="w-5 h-5 animate-bounce"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                            d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
-                            stroke-linejoin="round"
-                            stroke-linecap="round"
-                            ></path>
-                        </svg>
-                    </button>
+                    <Link href="/Resume/UsamaNazir">
+                        <button
+                            className={`cursor-pointer flex justify-between ${bottombuttons} px-3 py-2 rounded-full ${bottombuttontext} tracking-wider shadow-xl hover:${bottombuttonshover} hover:scale-105 duration-500 hover:ring-1 font-mono w-[150px] hover:${hoverring}`}
+                            >Resume
+                            <svg
+                                className="w-5 h-5 animate-bounce"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+                                stroke-linejoin="round"
+                                stroke-linecap="round"
+                                ></path>
+                            </svg>
+                        </button>
+                    </Link>
                     
                 </div>
             </div>
