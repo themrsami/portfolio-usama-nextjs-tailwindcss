@@ -20,7 +20,7 @@ const About = () => {
   }, []);
   return (
     <>
-    <div className='flex flex-wrap md:flex-row items-center w-full mx-auto justify-center gap-4 mt-4'>
+    <div className='flex flex-wrap mb-24 md:flex-row items-center w-full mx-auto justify-center gap-4 mt-4'>
         <div className="animatex mt-8 w-[320px] h-[350px]">
           <h2 className={`${headings} font-mono mb-1 text-2xl text-center font-semibold`}>Personal Details</h2>
           <div className="bg-gray-900 w-full h-full rounded-lg">
