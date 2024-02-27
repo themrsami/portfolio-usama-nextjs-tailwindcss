@@ -5,7 +5,7 @@ import { gsap } from 'gsap';
 import { useContext, useEffect } from 'react';
 import { ThemeContext } from '@/app/_components/ThemeContext'; 
 
-const about = () => {
+const About = () => {
   const { isToggled } = useContext(ThemeContext);
   const headings = isToggled ? 'text-white' : 'text-black';
   useEffect(() => {
@@ -135,4 +135,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About
