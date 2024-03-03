@@ -8,6 +8,8 @@ import { ThemeContext } from '@/app/_components/ThemeContext';
 const About = () => {
   const { isToggled } = useContext(ThemeContext);
   const headings = isToggled ? 'text-white' : 'text-black';
+  const contenttext = isToggled ? 'text-white' : 'text-black';
+  const cardbackground = isToggled ? 'bg-gray-900' : 'bg-white';
   useEffect(() => {
     gsap.fromTo('.animatey', 
       { y: '100%', opacity: 0 },
@@ -23,7 +25,7 @@ const About = () => {
     <div className='flex flex-wrap md:flex-row items-center w-full mx-auto justify-center gap-4 mt-4'>
         <div className="animatex mt-8 w-[320px] h-[350px]">
           <h2 className={`${headings} font-mono mb-1 text-2xl text-center font-semibold`}>Personal Details</h2>
-          <div className="bg-gray-900 w-full h-full rounded-lg">
+          <div className={`${cardbackground} w-full h-full rounded-lg`}>
               <div className="flex p-2 gap-1">
               <div className="animate-bounce delay-1">
                 <span className="bg-red-500 inline-block center w-3 h-3 rounded-full"></span>
@@ -35,7 +37,7 @@ const About = () => {
                 <span className="bg-green-500 box inline-block center w-3 h-3 rounded-full"></span>
               </div>
             </div>
-            <div className="card__content">
+            <div className={`card__content ${contenttext}`}>
               <h2 className='text-center text-2xl font-mono'>Hello I am USAMA</h2>
               <h4 className='text-center font-mono'>Front-End Developer</h4>
               <h5 className='font-mono mt-8 text-lg'>Specialities</h5>
@@ -52,7 +54,7 @@ const About = () => {
         </div>
         <div className="animatey mt-8 w-[320px] h-[350px]">
           <h2 className={`${headings} font-mono mb-1 text-2xl text-center font-semibold`}>My Expertise</h2>
-          <div className="bg-gray-900 w-full h-full rounded-lg">
+          <div className={`${cardbackground} w-full h-full rounded-lg`}>
               <div className="flex p-2 gap-1">
               <div className="animate-bounce delay-1">
                 <span className="bg-red-500 inline-block center w-3 h-3 rounded-full"></span>
@@ -64,7 +66,7 @@ const About = () => {
                 <span className="bg-green-500 box inline-block center w-3 h-3 rounded-full"></span>
               </div>
             </div>
-            <div className="card__content">
+            <div className={`card__content ${contenttext}`}>
               <ul className='ml-4 mr-4'>
                 <li className='text-lg font-mono'>HTML</li>
                 <li className='text-lg font-mono'>CSS</li>
@@ -82,7 +84,7 @@ const About = () => {
         </div>
         <div className="animatex mt-8 w-[320px] h-[350px]">
           <h2 className={`${headings} font-mono mb-1 text-2xl text-center font-semibold`}>Hands on Projects</h2>
-          <div className="bg-gray-900 w-full h-full rounded-lg">
+          <div className={`${cardbackground} w-full h-full rounded-lg`}>
               <div className="flex p-2 gap-1">
               <div className="animate-bounce delaty-1">
                 <span className="bg-red-500 inline-block center w-3 h-3 rounded-full"></span>
@@ -94,7 +96,7 @@ const About = () => {
                 <span className="bg-green-500 box inline-block center w-3 h-3 rounded-full"></span>
               </div>
             </div>
-            <div className="card__content">
+            <div className={`card__content ${contenttext}`}>
               <ul className='ml-4 mr-4 flex flex-col gap-2'>
                 <Link href="https://www.saeedvisuals.com"><li className='text-lg font-mono text-blue-400'> - Portfolio Website</li></Link>
                 <Link href="https://carezonehomecare.vercel.app/"><li className='text-lg font-mono text-blue-400'> - Health Care Website</li></Link>
@@ -108,7 +110,7 @@ const About = () => {
         </div>
         <div className="animatey mb-24 mt-8 w-[850px] h-auto">
           <h2 className={`${headings} font-mono mb-1 text-2xl text-center font-semibold`}>Education Details</h2>
-          <div className="bg-gray-900 w-full h-full rounded-lg">
+          <div className={`${cardbackground} w-full h-full rounded-lg`}>
               <div className="flex p-2 gap-1">
               <div className="animate-bounce delaty-1">
                 <span className="bg-red-500 inline-block center w-3 h-3 rounded-full"></span>
@@ -120,7 +122,7 @@ const About = () => {
                 <span className="bg-green-500 box inline-block center w-3 h-3 rounded-full"></span>
               </div>
             </div>
-            <div className="card__content">
+            <div className={`card__content ${contenttext}`}>
               <ul className='ml-4 mr-4 flex flex-col gap-2'>
                 <li className='text-lg font-mono'><span className='font-bold text-blue-700'>Matriculation</span> from Govt. High School Shahdara</li>
                 <li className='text-lg font-mono'><span className='font-bold text-blue-700'>Intermediate</span> from Pak Garrison Higher Secondary School Nankana</li>

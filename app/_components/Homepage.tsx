@@ -76,7 +76,7 @@ const Homepage = () => {
                                 <Link href="https://www.github.com/themrsami" target='_blank'>
                                     <button className={`group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold md:hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]`}>
                                         <BiLogoGithub className="text-3xl" />
-                                        <span className={`absolute opacity-0 group-hover:opacity-100 ${socialtext} group-hover:text-[16px] font-mono group-hover:translate-x-20 md:group-hover:translate-y-10 md:group-hover:translate-x-10 lg:group-hover:translate-x-10 duration-5001`}>
+                                        <span className={`absolute opacity-0 group-hover:opacity-100 ${socialtext} group-hover:text-[16px] font-mono group-hover:translate-y-10 md:group-hover:translate-y-10 md:group-hover:translate-x-10 lg:group-hover:translate-x-10 duration-5001`}>
                                             @themrsami
                                         </span>
                                     </button>
@@ -84,7 +84,7 @@ const Homepage = () => {
                                 <Link href="https://www.linkedin.com/in/usama-nazir" target='_blank'>
                                     <button className={`group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold md:hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]`}>
                                         <BiLogoLinkedin className="text-3xl" />
-                                        <span className={`absolute opacity-0 group-hover:opacity-100 ${socialtext} group-hover:text-[16px] font-mono group-hover:translate-x-20 md:group-hover:translate-y-10 md:group-hover:translate-x-10 lg:group-hover:translate-x-10 duration-500`}>
+                                        <span className={`absolute opacity-0 group-hover:opacity-100 ${socialtext} group-hover:text-[16px] font-mono group-hover:translate-y-10 md:group-hover:translate-y-10 md:group-hover:translate-x-10 lg:group-hover:translate-x-10 duration-500`}>
                                             @usama-nazir
                                         </span>
                                     </button>
@@ -92,7 +92,7 @@ const Homepage = () => {
                                 <Link href="https://www.instagram.com/themrsami" target='_blank'>
                                     <button className={`group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold md:hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]`}>
                                         <BiLogoInstagram className="text-3xl" />
-                                        <span className={`absolute opacity-0 group-hover:opacity-100 ${socialtext} group-hover:text-[16px] font-mono group-hover:translate-x-20 md:group-hover:translate-y-10 md:group-hover:translate-x-10 lg:group-hover:translate-x-10 duration-500`}>
+                                        <span className={`absolute opacity-0 group-hover:opacity-100 ${socialtext} group-hover:text-[16px] font-mono group-hover:translate-y-10 md:group-hover:translate-y-10 md:group-hover:translate-x-10 lg:group-hover:translate-x-10 duration-500`}>
                                             @themrsami
                                         </span>
                                     </button>
@@ -100,7 +100,7 @@ const Homepage = () => {
                                 <Link href="https://www.twitter.com/themrsami" target='_blank'>
                                     <button className={`group flex justify-center p-2 rounded-md drop-shadow-xl bg-gradient-to-r from-gray-800 to-black text-white font-semibold md:hover:rounded-[50%] transition-all duration-500 hover:from-[#331029] hover:to-[#310413]`}>
                                         <BiLogoTwitter className="text-3xl" />
-                                        <span className={`absolute opacity-0 group-hover:opacity-100 ${socialtext} group-hover:text-[16px] font-mono group-hover:translate-x-10 md:group-hover:translate-y-10 md:group-hover:translate-x-10 lg:group-hover:translate-x-10 duration-500`}>
+                                        <span className={`absolute opacity-0 group-hover:opacity-100 ${socialtext} group-hover:text-[16px] font-mono group-hover:translate-y-10 md:group-hover:translate-y-10 md:group-hover:translate-x-10 lg:group-hover:translate-x-10 duration-500`}>
                                             @themrsami
                                         </span>
                                     </button>
