@@ -70,8 +70,10 @@ body {
 .homepage-grid-light{
   @apply bg-white text-black rounded-3xl ring-1 ring-black hover:cursor-pointer backdrop-blur-xl hover:bg-gray-200;
 }
+
+
 .homepage-heading-light{
-  @apply text-black
+  @apply text-white
 }
 
 .homepage-description-light{
@@ -84,7 +86,7 @@ body {
   @apply bg-gray-900/50 text-white rounded-3xl ring-1 ring-white hover:cursor-pointer backdrop-blur-xl hover:bg-gray-900;
 }
 .homepage-heading-dark{
-  @apply text-white
+  @apply text-black
 }
 
 .homepage-description-dark{
@@ -94,7 +96,7 @@ body {
 /* body bg*/
 
 .dark-body{
-  @apply bg-gradient-to-r from-gray-900 to-gray-600;
+  @apply bg-gradient-to-r from-[#10101A] to-[#222235];
 }
 
 .light-body{

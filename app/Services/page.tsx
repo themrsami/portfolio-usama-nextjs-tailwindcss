@@ -4,6 +4,10 @@ import { useContext, useEffect } from 'react';
 import { ThemeContext } from '@/app/_components/ThemeContext'; 
 import Image from 'next/image';
 import { gsap } from 'gsap';
+import { BiSolidBusiness } from "react-icons/bi";
+import { BiLock } from "react-icons/bi";
+import { BiPurchaseTag } from "react-icons/bi";
+import { BiCodeCurly } from "react-icons/bi";
 
 const Services = () => {
   const { isToggled } = useContext(ThemeContext);
@@ -38,8 +42,8 @@ const Services = () => {
               <div className={`flex flex-col h-full justify-center p-10 ${gridsbackground} rounded-[50px] animatex`}>
                 <div className="flex flex-wrap items-center -m-3 mb-5">
                   <div className="w-auto p-3">
-                    <div className="flex items-center justify-center w-16 h-16 bg-neutral-900 rounded-full">
-                      <Image src="/sticker.svg" alt="" width={28} height={28}/>
+                    <div className="flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full">
+                      <BiSolidBusiness className='text-4xl text-black'/>
                     </div>
                   </div>
                   <div className="flex-1 p-3">
@@ -53,8 +57,8 @@ const Services = () => {
               <div className={`mb-6 p-10 ${gridsbackground} rounded-[50px] animatey`}>
                 <div className="flex flex-wrap items-center -m-3 mb-5">
                   <div className="w-auto p-3">
-                    <div className="flex items-center justify-center w-16 h-16 bg-neutral-900 rounded-full">
-                      <Image src="/sticker.svg" alt="" width={28} height={28}/>
+                    <div className="flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full">
+                      <BiLock className='text-4xl text-black'/>
                     </div>
                   </div>
                   <div className="flex-1 p-3">
@@ -66,8 +70,8 @@ const Services = () => {
               <div className={`p-10 ${gridsbackground} rounded-[50px] animatey`}>
                 <div className="flex flex-wrap items-center -m-3 mb-5">
                   <div className="w-auto p-3">
-                    <div className="flex items-center justify-center w-16 h-16 bg-neutral-900 rounded-full">
-                      <Image src="/sticker.svg" alt="" width={28} height={28}/>
+                    <div className="flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full">
+                      <BiPurchaseTag className='text-4xl text-black'/>
                     </div>
                   </div>
                   <div className="flex-1 p-3">
@@ -81,8 +85,8 @@ const Services = () => {
             <div className={`flex flex-col h-full justify-center p-10 ${gridsbackground} rounded-[50px] animatex`}>
                 <div className="flex flex-wrap items-center -m-3 mb-5">
                   <div className="w-auto p-3">
-                    <div className="flex items-center justify-center w-16 h-16 bg-neutral-900 rounded-full">
-                      <Image src="/sticker.svg" alt="" width={28} height={28}/>
+                    <div className="flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full">
+                      <BiCodeCurly className='text-4xl text-black'/>
                     </div>
                   </div>
                   <div className="flex-1 p-3">
