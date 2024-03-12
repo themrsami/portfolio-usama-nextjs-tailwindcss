@@ -1,6 +1,6 @@
 'use client';
 import React from 'react'
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { ThemeContext } from '@/app/_components/ThemeContext'; 
 import Image from 'next/image';
 import { gsap } from 'gsap';
@@ -10,25 +10,6 @@ const Portfolio = () => {
   const gridsbackground = isToggled ? 'bg-gray-900' : 'bg-white';
   const tabbuttoncolor = isToggled ? 'text-gray-100' : 'text-gray-900';
   const headingtext = isToggled ? 'text-white' : 'text-gray-900';
-
-  useEffect(() => {
-    gsap.fromTo('.animatey', 
-      { y: '100%', opacity: 0 },
-      { duration: 2, y: '0%', opacity: 1, ease: 'power3.out' }
-    );
-    gsap.fromTo('.animatex', 
-      { x: '100%', opacity: 0 },
-      { duration: 2, x: '0%', opacity: 1, ease: 'power3.out' }
-    );
-    gsap.fromTo('.animateltr', 
-      { x: '-100%', opacity: 0 },
-      { duration: 2, x: '0%', opacity: 1, ease: 'power3.out' }
-    );
-    gsap.fromTo('.animatettb', 
-      { y: '-100%', opacity: 0 },
-      { duration: 2, y: '0%', opacity: 1, ease: 'power3.out' }
-    );
-  }, []);
 
   return (
     <>

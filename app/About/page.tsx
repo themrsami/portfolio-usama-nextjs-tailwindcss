@@ -1,8 +1,7 @@
 'use client';
 import React from 'react'
 import Link from 'next/link'
-import { gsap } from 'gsap';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { ThemeContext } from '@/app/_components/ThemeContext'; 
 
 const About = () => {
@@ -10,16 +9,6 @@ const About = () => {
   const headings = isToggled ? 'text-white' : 'text-black';
   const contenttext = isToggled ? 'text-white' : 'text-black';
   const cardbackground = isToggled ? 'bg-gray-900' : 'bg-white';
-  useEffect(() => {
-    gsap.fromTo('.animatey', 
-      { y: '100%', opacity: 0 },
-      { duration: 2, y: '0%', opacity: 1, ease: 'power3.out' }
-    );
-    gsap.fromTo('.animatex', 
-      { x: '100%', opacity: 0 },
-      { duration: 2, x: '0%', opacity: 1, ease: 'power3.out' }
-    );
-  }, []);
   return (
     <>
     <div className='flex flex-wrap md:flex-row items-center w-full mx-auto justify-center gap-4 mt-4'>

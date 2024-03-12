@@ -1,9 +1,7 @@
 'use client';
 import React from 'react'
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { ThemeContext } from '@/app/_components/ThemeContext'; 
-import Image from 'next/image';
-import { gsap } from 'gsap';
 import { BiSolidBusiness } from "react-icons/bi";
 import { BiLock } from "react-icons/bi";
 import { BiPurchaseTag } from "react-icons/bi";
@@ -14,16 +12,6 @@ const Services = () => {
   const alltext = isToggled ? 'text-white' : 'text-black';
   const headinglinebg = isToggled ? 'bg-white' : 'bg-black';
   const gridsbackground = isToggled ? 'bg-gray-800' : 'bg-gray-100';
-  useEffect(() => {
-    gsap.fromTo('.animatey', 
-      { y: '100%', opacity: 0 },
-      { duration: 2, y: '0%', opacity: 1, ease: 'power3.out' }
-    );
-    gsap.fromTo('.animatex', 
-      { x: '100%', opacity: 0 },
-      { duration: 2, x: '0%', opacity: 1, ease: 'power3.out' }
-    );
-  }, []);
   return (
     <>
       <section className={`py-12 md:py-24 xl:pb-64 ${alltext} mb-12 mt-[-20px]`}>

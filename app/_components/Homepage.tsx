@@ -1,7 +1,6 @@
 'use client';
 import React, { useContext, useEffect, useState } from 'react';
 import Image from 'next/image';
-import { gsap } from 'gsap';
 import { BiLogoJavascript, BiLogoHtml5, BiLogoCss3, BiLogoReact, BiLogoPhp, BiLogoPython, BiLogoGithub, BiLogoLinkedin, BiLogoInstagram, BiLogoTwitch, BiLogoFacebook, BiLogoTwitter } from "react-icons/bi";
 import { ThemeContext } from './ThemeContext'; // Import the ThemeContext
 import Link from 'next/link';
@@ -20,12 +19,6 @@ const Homepage = () => {
     const bottombuttontext = isToggled ? 'text-white' : 'text-black';
     const bottombuttonshover = isToggled ? 'bg-gray-300' : 'bg-black';
     const hoverring = isToggled ? 'ring-white' : 'ring-black';
-    useEffect(() => {
-        gsap.fromTo('.animate', 
-          { y: '100%', opacity: 0 },
-          { duration: 2, y: '0%', opacity: 1, ease: 'power3.out' }
-        );
-      }, []);
 
       const texts = ['Front-End Developer', 'UI/UX Designer', 'Graphic Designer', 'Video Editor' ];
       const [index, setIndex] = useState(0);
