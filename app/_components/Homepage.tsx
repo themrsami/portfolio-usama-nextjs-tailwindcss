@@ -54,7 +54,7 @@ const Homepage = () => {
     <section className="mb-1 w-full h-[80%]">
         <div className="container mx-auto px-4">
             <div className="w-full space-y-4 mx-auto">
-                <div className={`animate p-7 flex flex-col md:flex-row lg:space-x-20 md:space-x-40 xl:space-x-60 2xl:space-x-120 ${gridClass}`}>
+                <div className={`animate p-7 flex flex-col md:flex-row md:space-x-60 lg:space-x-80 ${gridClass}`}>
                     <div className='flex flex-col justify-center sm:flex-col md:flex-col lg:flex-row'>
                         <div className='max-w-[308px] max-h-[300px] md:w-[180px] md:h-[180px] lg-w-[320px] lg-h-[300px] flex mx-auto'>
                             <Image src={`/${profilephoto}`} alt="Usama Nazir" width={320} height={300} className="rounded-full flex justify-center mx-auto md:flex md:justify-center md:mx-auto mb-1" />

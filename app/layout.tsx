@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider>
             <Navbar/>
-            <div className="relative flex top-24 left-0 right-0 bottom-28 justify-center mx-auto container w-[90%] h-[90%] rounded-[10px]">
+            <div className="relative flex top-24 left-0 right-0 bottom-28 justify-center mx-auto container w-[100%] h-[100%] rounded-[10px]">
               {children}
             </div>
           </ThemeProvider>
