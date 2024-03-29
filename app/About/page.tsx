@@ -113,8 +113,6 @@ const About = () => {
             </div>
             <div className={`card__content ${contenttext}`}>
               <ul className='ml-4 mr-4 flex flex-col gap-2'>
-                <li className='text-lg font-mono'><span className='font-bold text-blue-700'>Matriculation</span> from Govt. High School Shahdara</li>
-                <li className='text-lg font-mono'><span className='font-bold text-blue-700'>Intermediate</span> from Pak Garrison Higher Secondary School Nankana</li>
                 <li className='text-lg font-mono'><span className='font-bold text-blue-700'>Bachelors</span> in Physics from Comsats University (Lahore Campus)</li>
                 <li className='text-lg font-mono'><span className='font-bold text-blue-700'>Certification</span> in Web & Mobile App Development from UET Lahore</li>               
               </ul>

@@ -1,7 +1,10 @@
 'use client';
 import React from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import Carousal from "@/app/_components/Carousal"
+import Carousalbusiness from "@/app/_components/Carousalbusiness"
+import Carousalbrand from "@/app/_components/Carousalbrand"
+import Carousalcustom from "@/app/_components/Carousalcustom"
+import Carousalinstitue from "@/app/_components/carousalinstitute"
 
 const Services = () => {
 
@@ -16,10 +19,10 @@ const Services = () => {
           <TabsTrigger value="desired-web">Desired Website</TabsTrigger>
         </TabsList>
         <div className='mt-24 sm:mt-10 md:mt-0'>
-          <TabsContent value="business-web"><Carousal/></TabsContent>
-          <TabsContent value="brand-web">Make changes to your brand web here..</TabsContent>
-          <TabsContent value="custom-web">Make changes to your custom web here.</TabsContent>
-          <TabsContent value="institute-web">Make changes to your institute web here.</TabsContent>
+          <TabsContent value="business-web"><Carousalbusiness/></TabsContent>
+          <TabsContent value="brand-web"><Carousalbrand/></TabsContent>
+          <TabsContent value="custom-web"><Carousalcustom/></TabsContent>
+          <TabsContent value="institute-web"><Carousalinstitue/></TabsContent>
           <TabsContent value="desired-web">Make changes to your desired web here.</TabsContent>
         </div>
       </Tabs>

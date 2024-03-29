@@ -35,7 +35,7 @@ const TabsTrigger = React.forwardRef<
 >(({ className, ...props }, ref) => {
   const { isToggled } = useContext(ThemeContext);
   const activetabtext = isToggled ? 'data-[state=active]:text-background' : 'data-[state=active]:text-foreground';
-  const activetabbg = isToggled ? 'data-[state=active]:bg-black' : 'data-[state=active]:bg-white';
+  const activetabbg = isToggled ? 'data-[state=active]:bg-gray-600' : 'data-[state=active]:bg-white';
 
   return (
     <TabsPrimitive.Trigger
