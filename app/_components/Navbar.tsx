@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { usePathname } from 'next/navigation';
-import { BiHomeHeart } from "react-icons/bi";
+import { BiHome, BiHomeHeart } from "react-icons/bi";
 import { BiSolidUser } from "react-icons/bi";
 import { BiSolidCategoryAlt } from "react-icons/bi";
 import { BiBlanket } from "react-icons/bi";
@@ -28,8 +28,8 @@ const Navbar = () => {
             <ul className='flex w-[85%] justify-between mx-auto'>
                 <Link href='/' className={pathname === '/' ? activenav : inactivenav} >
                     <li className='group'>
-                        <BiHomeHeart/>
-                        <span className="absolute text-black -top-8 left-[15%] -translate-x-[10%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+                        <BiHome/>
+                        <span className="absolute text-black -top-8 left-[35%] -translate-x-[85%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
                             Home
                         </span>
                     </li>
