@@ -91,7 +91,7 @@ const Contact = () => {
                   <FormItem>
                     <FormLabel className={labelText}>Message</FormLabel>
                     <FormControl>
-                      <Input as="textarea" placeholder="Your Message" {...field} className={inputTextColor} />
+                      <Input placeholder="Your Message" {...field} className={inputTextColor} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
