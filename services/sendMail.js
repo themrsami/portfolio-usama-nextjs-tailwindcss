@@ -4,7 +4,7 @@ import transporter from '@/lib/nodemailer';
 export default async function sendEmail({ subject, text, to }) {
   const mailOptions = {
     from: process.env.GMAIL_APP_USERNAME,
-    to,
+    to: process.env.RECIEVER_EMAIL,
     subject,
     text,
   };
