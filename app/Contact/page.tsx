@@ -10,6 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogAction } from '@/components/ui/alert-dialog';
 import { FiCheckCircle, FiXCircle } from 'react-icons/fi';
+import FAQAccordion from '../_components/FAQAccordian';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters.'),
@@ -76,48 +77,53 @@ const Contact = () => {
   return (
     <div className={`container mx-auto ${contenttext} mb-12`}>
       <h1 className={`text-4xl font-bold text-center mb-8 ${headings}`}>Contact Me</h1>
-      <div className="flex justify-center">
-        <Card className={`shadow-lg ${cardbackground} w-full max-w-md`}>
-          <CardHeader>
-            <CardTitle className={headings}>Get in Touch</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <FormField name="name" control={form.control} render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className={labelText}>Name</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Your Name" {...field} className={inputTextColor} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )} />
-                <FormField name="email" control={form.control} render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className={labelText}>Email</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Your Email" {...field} className={inputTextColor} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )} />
-                <FormField name="message" control={form.control} render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className={labelText}>Message</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Your Message" {...field} className={inputTextColor} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )} />
-                <Button type="submit" className={`w-full ${buttonBackground}`}>
-                  Send Message
-                </Button>
-              </form>
-            </Form>
-          </CardContent>
-        </Card>
+      <div className="flex justify-center gap-8 flex-col mx-auto items-center">
+        <div className="w-full max-w-md">
+          <Card className={`shadow-lg ${cardbackground}`}>
+            <CardHeader>
+              <CardTitle className={headings}>Get in Touch</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <FormField name="name" control={form.control} render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className={labelText}>Name</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your Name" {...field} className={inputTextColor} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )} />
+                  <FormField name="email" control={form.control} render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className={labelText}>Email</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your Email" {...field} className={inputTextColor} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )} />
+                  <FormField name="message" control={form.control} render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className={labelText}>Message</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your Message" {...field} className={inputTextColor} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )} />
+                  <Button type="submit" className={`w-full ${buttonBackground}`}>
+                    Send Message
+                  </Button>
+                </form>
+              </Form>
+            </CardContent>
+          </Card>
+        </div>
+        <div className="w-full max-w-md">
+          <FAQAccordion />
+        </div>
       </div>
       <AlertDialog open={dialogOpen} onOpenChange={setDialogOpen}>
         <AlertDialogContent className="animate-fade-in">
