@@ -2,12 +2,13 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ThemeContext } from '@/app/_components/ThemeContext'; 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogAction } from '@/components/ui/alert-dialog';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters.'),
@@ -23,6 +24,10 @@ const Contact = () => {
   const contenttext = isToggled ? 'text-white' : 'text-black';
   const inputTextColor = isToggled ? 'text-white' : 'text-black';
   const cardbackground = isToggled ? 'bg-gray-900' : 'bg-white';
+  
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [dialogMessage, setDialogMessage] = useState('');
+  const [dialogTitle, setDialogTitle] = useState('');
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -48,15 +53,20 @@ const Contact = () => {
       });
       const result = await response.json();
       if (response.ok) {
-        alert(result.message);
+        setDialogTitle('Success');
+        setDialogMessage(result.message);
       } else {
-        alert('Failed to send message');
+        setDialogTitle('Error');
+        setDialogMessage('Failed to send message');
       }
     } catch (error) {
       console.error('Error sending message:', error);
+      setDialogTitle('Error');
+      setDialogMessage('An error occurred while sending the message');
+    } finally {
+      setDialogOpen(true);
     }
   };
-  
 
   return (
     <div className={`container mx-auto ${contenttext} mb-12`}>
@@ -104,6 +114,19 @@ const Contact = () => {
           </CardContent>
         </Card>
       </div>
+      <AlertDialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>{dialogTitle}</AlertDialogTitle>
+            <AlertDialogDescription>
+              {dialogMessage}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction onClick={() => setDialogOpen(false)}>Close</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 };
