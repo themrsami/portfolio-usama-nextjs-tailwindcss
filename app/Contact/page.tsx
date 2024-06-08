@@ -2,13 +2,14 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useContext, useState } from 'react';
+import { useContext, useState, ReactNode } from 'react';
 import { ThemeContext } from '@/app/_components/ThemeContext'; 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogAction } from '@/components/ui/alert-dialog';
+import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogAction } from '@/components/ui/alert-dialog';
+import { FiCheckCircle, FiXCircle } from 'react-icons/fi';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters.'),
@@ -28,6 +29,7 @@ const Contact = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [dialogMessage, setDialogMessage] = useState('');
   const [dialogTitle, setDialogTitle] = useState('');
+  const [dialogIcon, setDialogIcon] = useState<ReactNode>(null);
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -54,15 +56,18 @@ const Contact = () => {
       const result = await response.json();
       if (response.ok) {
         setDialogTitle('Success');
-        setDialogMessage(result.message);
+        setDialogMessage('Your message has been sent successfully. I will get back to you as soon as possible.');
+        setDialogIcon(<FiCheckCircle className="text-green-500 w-6 h-6" />);
       } else {
         setDialogTitle('Error');
-        setDialogMessage('Failed to send message');
+        setDialogMessage('Failed to send message. Please try again later. We apologize for the inconvenience.');
+        setDialogIcon(<FiXCircle className="text-red-500 w-6 h-6" />);
       }
     } catch (error) {
       console.error('Error sending message:', error);
       setDialogTitle('Error');
-      setDialogMessage('An error occurred while sending the message');
+      setDialogMessage('An error occurred while sending the message. Please try again later. We apologize for the inconvenience.');
+      setDialogIcon(<FiXCircle className="text-red-500 w-6 h-6" />);
     } finally {
       setDialogOpen(true);
     }
@@ -115,8 +120,9 @@ const Contact = () => {
         </Card>
       </div>
       <AlertDialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <AlertDialogContent>
+        <AlertDialogContent className="animate-fade-in">
           <AlertDialogHeader>
+            {dialogIcon}
             <AlertDialogTitle>{dialogTitle}</AlertDialogTitle>
             <AlertDialogDescription>
               {dialogMessage}
