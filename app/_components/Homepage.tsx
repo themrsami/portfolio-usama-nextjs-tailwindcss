@@ -20,35 +20,34 @@ const Homepage = () => {
     const bottombuttonshover = isToggled ? 'bg-gray-300' : 'bg-black';
     const hoverring = isToggled ? 'ring-white' : 'ring-black';
 
-      const texts = ['Front-End Developer', 'UI/UX Designer', 'Graphic Designer', 'Video Editor' ];
-      const [index, setIndex] = useState(0);
-      const [subIndex, setSubIndex] = useState(0);
-      const [reverse, setReverse] = useState(false);
+    const texts = ['Front-End Developer', 'Mobile App Developer', 'Database Engineer', 'UI/UX Designer', 'Graphics Designer', 'Video Editor' ];
+    const [index, setIndex] = useState(0);
+    const [subIndex, setSubIndex] = useState(0);
+    const [reverse, setReverse] = useState(false);
     
-      useEffect(() => {
+    useEffect(() => {
         if (index === texts.length) {
-          setIndex(0);
-          return;
+            setIndex(0);
+            return;
         }
-    
-        if ( subIndex === texts[index].length + 1 && 
-             !reverse ) {
-          setReverse(true);
-          return;
+
+        if (subIndex === texts[index].length + 1 && !reverse) {
+            setTimeout(() => setReverse(true), 2000);  // Wait for 2 seconds before starting to delete
+            return;
         }
-    
+
         if (subIndex === 0 && reverse) {
-          setReverse(false);
-          setIndex((prevIndex) => prevIndex === texts.length - 1 ? 0 : prevIndex + 1);
-          return;
+            setReverse(false);
+            setIndex((prevIndex) => (prevIndex === texts.length - 1 ? 0 : prevIndex + 1));
+            return;
         }
-    
+
         const timeout = setTimeout(() => {
-          setSubIndex((prevSubIndex) => prevSubIndex + (reverse ? -1 : 1));
-        }, 150);
-    
+            setSubIndex((prevSubIndex) => prevSubIndex + (reverse ? -1 : 1));
+        }, reverse ? 50 : 50);  // Adjust speed for typing and deleting
+
         return () => clearTimeout(timeout);
-      }, [subIndex, index, reverse]);
+    }, [subIndex, index, reverse]);
 
   return (
     <section className="mb-1 w-full h-[80%]">
