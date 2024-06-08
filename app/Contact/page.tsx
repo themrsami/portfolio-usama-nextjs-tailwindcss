@@ -75,7 +75,7 @@ const Contact = () => {
   };
 
   return (
-    <div className={`container mx-auto ${contenttext} mb-12`}>
+    <div className={`container mx-auto ${contenttext} mb-22 mt-8`}>
       <h1 className={`text-4xl font-bold text-center mb-8 ${headings}`}>Contact Me</h1>
       <div className="flex justify-center gap-8 flex-col mx-auto items-center">
         <div className="w-full max-w-md">
