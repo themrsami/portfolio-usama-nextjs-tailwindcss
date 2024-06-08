@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { usePathname } from 'next/navigation';
-import { BiHome, BiHomeHeart } from "react-icons/bi";
+import { BiHome } from "react-icons/bi";
 import { BiSolidUser } from "react-icons/bi";
 import { BiSolidCategoryAlt } from "react-icons/bi";
 import { BiBlanket } from "react-icons/bi";
@@ -71,11 +71,13 @@ const Navbar = () => {
 
         <nav className={`fixed z-[9999] top-1 left-0 right-0 flex justify-center mx-auto items-center max-w-[1100px] py-2 mt-2 rounded-full backdrop-blur-sm bg-white/10 ... ring-1 ${navring}`}>
             <ul className='flex w-full px-4 mx-auto justify-between items-center'>
-                <div className={`${nameheading}`}>
-                    <li>
-                        <p className='font-black'>Portfolio Usama</p>
-                    </li>
-                </div>
+                <Link href='/'>
+                    <div className={`${nameheading}`}>
+                        <li>
+                            <p className='font-black'>Portfolio Usama</p>
+                        </li>
+                    </div>
+                </Link>
                 <Toggletheme/>
             </ul>
         </nav>

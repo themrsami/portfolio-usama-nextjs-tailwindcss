@@ -123,7 +123,7 @@ const Contact = () => {
         <AlertDialogContent className="animate-fade-in">
           <AlertDialogHeader>
             {dialogIcon}
-            <AlertDialogTitle>{dialogTitle}</AlertDialogTitle>
+            <AlertDialogTitle style={{ color: dialogTitle === 'Success' ? 'green' : 'red' }}>{dialogTitle}</AlertDialogTitle>
             <AlertDialogDescription>
               {dialogMessage}
             </AlertDialogDescription>
