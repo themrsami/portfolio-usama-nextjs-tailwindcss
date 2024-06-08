@@ -77,7 +77,7 @@ const Contact = () => {
   return (
     <div className={`container mx-auto ${contenttext}`}>
       <h1 className={`text-4xl font-bold text-center mb-8 ${headings}`}>Contact Me</h1>
-      <div className="flex justify-center gap-8 flex-col mx-auto items-center mb-22">
+      <div className="flex justify-center gap-8 flex-col mx-auto items-center pb-[20%]">
         <div className="w-full max-w-md">
           <Card className={`shadow-lg ${cardbackground}`}>
             <CardHeader>

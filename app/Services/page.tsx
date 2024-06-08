@@ -16,7 +16,6 @@ const Services = () => {
           <TabsTrigger value="brand-web">Brand Website</TabsTrigger>
           <TabsTrigger value="institute-web">Education Website</TabsTrigger>
           <TabsTrigger value="custom-web">Custom Website</TabsTrigger>
-          
           <TabsTrigger value="desired-web">Desired Website</TabsTrigger>
         </TabsList>
         <div className='mt-24 sm:mt-10 md:mt-0'>
