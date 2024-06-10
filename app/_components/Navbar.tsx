@@ -10,6 +10,8 @@ import { BiPhone } from "react-icons/bi";
 import Toggletheme from './Toggletheme';
 import { ThemeContext } from './ThemeContext';
 import { useContext } from 'react';
+import { CoolMode } from "@/components/magicui/cool-mode";
+
 
 const Navbar = () => {
 
@@ -26,46 +28,56 @@ const Navbar = () => {
     <>
         <nav className={`fixed z-[9999] bottom-8 left-0 right-0 flex justify-center mx-auto items-center max-w-[280px] py-2 mt-6 rounded-full backdrop-blur-sm bg-white/10 ... ring-2 ${navring}`}>
             <ul className='flex w-[85%] justify-between mx-auto'>
-                <Link href='/' className={pathname === '/' ? activenav : inactivenav} >
-                    <li className='group'>
-                        <BiHome/>
-                        <span className="absolute text-black -top-8 left-[35%] -translate-x-[85%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
-                            Home
-                        </span>
-                    </li>
-                </Link>
-                <Link href='/About'  className={pathname === '/About' ? activenav : inactivenav}>
-                    <li className='group'>
-                        <BiSolidUser/>
-                        <span className="absolute text-black -top-8 left-[35%] -translate-x-[20%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
-                            About
-                        </span>
-                    </li>
-                </Link>
-                <Link href='/Services'  className={pathname === '/Services' ? activenav : inactivenav}>
-                    <li className='group'>
-                        <BiSolidCategoryAlt/>
-                        <span className="absolute text-black -top-8 left-[50%] -translate-x-[10%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
-                            Services
-                        </span>
-                    </li>
-                </Link>
-                <Link href='/Portfolio' className={pathname === '/Portfolio' ? activenav : inactivenav} >
-                    <li className='group'>
-                        <BiBlanket/>
-                        <span className="absolute text-black -top-8 left-[70%] -translate-x-[10%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
-                            Portfolio
-                        </span>
-                    </li>
-                </Link>
-                <Link href='/Contact'  className={pathname === '/Contact' ? activenav : inactivenav}>
-                    <li className='group'>
-                        <BiPhone/>
-                        <span className="absolute text-black -top-8 left-[90%] -translate-x-[10%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
-                            Contact
-                        </span>
-                    </li>
-                </Link>
+                <CoolMode>
+                    <Link href='/' className={pathname === '/' ? activenav : inactivenav} >
+                        <li className='group'>
+                            <BiHome/>
+                            <span className="absolute text-black -top-8 left-[35%] -translate-x-[85%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+                                Home
+                            </span>
+                        </li>
+                    </Link>
+                </CoolMode>
+                <CoolMode>
+                    <Link href='/About'  className={pathname === '/About' ? activenav : inactivenav}>
+                        <li className='group'>
+                            <BiSolidUser/>
+                            <span className="absolute text-black -top-8 left-[35%] -translate-x-[20%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+                                About
+                            </span>
+                        </li>
+                    </Link>
+                </CoolMode>
+                <CoolMode>
+                    <Link href='/Services'  className={pathname === '/Services' ? activenav : inactivenav}>
+                        <li className='group'>
+                            <BiSolidCategoryAlt/>
+                            <span className="absolute text-black -top-8 left-[50%] -translate-x-[10%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+                                Services
+                            </span>
+                        </li>
+                    </Link>
+                </CoolMode>
+                <CoolMode>
+                    <Link href='/Portfolio' className={pathname === '/Portfolio' ? activenav : inactivenav} >
+                        <li className='group'>
+                            <BiBlanket/>
+                            <span className="absolute text-black -top-8 left-[70%] -translate-x-[10%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+                                Portfolio
+                            </span>
+                        </li>
+                    </Link>
+                </CoolMode>
+                <CoolMode>
+                    <Link href='/Contact'  className={pathname === '/Contact' ? activenav : inactivenav}>
+                        <li className='group'>
+                            <BiPhone/>
+                            <span className="absolute text-black -top-8 left-[90%] -translate-x-[10%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+                                Contact
+                            </span>
+                        </li>
+                    </Link>
+                </CoolMode>
             </ul>
         </nav>
 

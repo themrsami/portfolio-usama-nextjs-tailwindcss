@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogAction } from '@/components/ui/alert-dialog';
 import { FiCheckCircle, FiXCircle } from 'react-icons/fi';
 import FAQAccordion from '../_components/FAQAccordian';
+import { CoolMode } from "@/components/magicui/cool-mode";
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters.'),
@@ -113,9 +114,11 @@ const Contact = () => {
                       <FormMessage />
                     </FormItem>
                   )} />
-                  <Button type="submit" className={`w-full ${buttonBackground}`}>
-                    Send Message
-                  </Button>
+                  <CoolMode>
+                    <Button type="submit" className={`w-full ${buttonBackground}`}>
+                      Send Message
+                    </Button>
+                  </CoolMode>
                 </form>
               </Form>
             </CardContent>
